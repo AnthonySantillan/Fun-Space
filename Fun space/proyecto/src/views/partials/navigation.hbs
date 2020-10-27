@@ -1,0 +1,55 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+  
+    <div class="contenedor"><h1 id="fintech" style="color: aliceblue; position: absolute; left: 160px;"><svg viewBox="0 0 960 300">
+                <symbol id="s-text">
+                    <text text-anchor="middle" x="50%" y="40%">Fun Space</text>
+                </symbol>
+            
+                <g class = "g-ants">
+                    <use xlink:href="#s-text" class="text-copy"></use>
+                    <use xlink:href="#s-text" class="text-copy"></use>
+                    <use xlink:href="#s-text" class="text-copy"></use>
+                    <use xlink:href="#s-text" class="text-copy"></use>
+                    <use xlink:href="#s-text" class="text-copy"></use>
+                </g>
+            </svg></h1>
+    </div>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        {{#if user}}
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+          Estadisticas
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/goles/guardados">Agregar estadisticas de un jugador</a>
+            <a class="dropdown-item" href="/goles/list">ver estadisticas</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/perfil" >Perfil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout" >Cierre la Secion</a>
+        </li>
+        {{else}}
+        <li class="nav-item">
+          <a class="nav-link" href="/LOGIN" id="session">Inicia de Secion</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/registro" id="registro">Registrate</a>
+        </li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>
